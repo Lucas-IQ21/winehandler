@@ -24,7 +24,7 @@ namespace wineHandler
             loader.Caves(comboBoxCave);
 
             comboBoxCouleur.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxCouleur.Items.AddRange(new string[] { "Rouge", "Blanc", "Rosé" });
+            comboBoxCouleur.Items.AddRange(new string[] { "Rouge", "Blanc", "Rose" });
         }
 
         private void btnAjouter_Click_1(object sender, EventArgs e)
@@ -70,10 +70,10 @@ namespace wineHandler
                 int idCave = (int)comboBoxCave.SelectedValue;
                 string couleur = comboBoxCouleur.SelectedItem.ToString();
 
-                var couleursValides = new[] { "Rouge", "Blanc", "Rosé" };
+                var couleursValides = new[] { "Rouge", "Blanc", "Rose" };
                 if (!couleursValides.Contains(couleur))
                 {
-                    MessageBox.Show("Couleur invalide. Choisissez parmi : Rouge, Blanc, Rosé.");
+                    MessageBox.Show("Couleur invalide. Choisissez parmi : Rouge, Blanc, Rose.");
                     return;
                 }
 

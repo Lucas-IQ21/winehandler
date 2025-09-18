@@ -1,4 +1,4 @@
-using Azure.Core;
+Ôªøusing Azure.Core;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Windows.Forms;
@@ -19,7 +19,7 @@ namespace wineHandler
             loader.Caves(comboBoxCave);
             loadTableau();
             Style style = new Style();
-            // Style gÈnÈral
+            // Style g√©n√©ral
             this.BackColor = Color.WhiteSmoke;
             this.Font = new Font("Segoe UI", 10, FontStyle.Regular);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -55,6 +55,27 @@ namespace wineHandler
             DataGridVin.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkRed;
             DataGridVin.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             DataGridVin.EnableHeadersVisualStyles = false;
+
+            // Bouton Supprimer
+            btnSupprimerBouteille.Parent = DataGridVin.Parent;
+            btnSupprimerBouteille.Size = new Size(220, 42);
+            btnSupprimerBouteille.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            void buttonSupprimerSousLeTableau()
+            {
+                int margin = 10;
+                btnSupprimerBouteille.Location = new Point(
+                    DataGridVin.Left + (DataGridVin.Width - btnSupprimerBouteille.Width) / 2,
+                    DataGridVin.Bottom + margin
+                );
+            }
+            buttonSupprimerSousLeTableau();
+            DataGridVin.SizeChanged += (_, __) => buttonSupprimerSousLeTableau();
+            DataGridVin.LocationChanged += (_, __) => buttonSupprimerSousLeTableau();
+            if (DataGridVin.Parent != null)
+                DataGridVin.Parent.SizeChanged += (_, __) => buttonSupprimerSousLeTableau();
+
+
         }
 
 
@@ -105,6 +126,18 @@ namespace wineHandler
                     HeaderText = "Statut",
                     DataPropertyName = "Statut"
                 });
+                DataGridVin.Columns.Add(new DataGridViewTextBoxColumn()
+                {
+                    HeaderText = "Couleur",
+                    DataPropertyName = "Couleur"
+                });
+                DataGridVin.Columns.Add(new DataGridViewTextBoxColumn()
+                {
+                    Name = "IdBouteille",
+                    DataPropertyName = "IdBouteille",
+                    Visible = false
+                });
+
 
                 var raw = _context.Bouteilles
                     .Include(b => b.IdVinNavigation)
@@ -113,13 +146,13 @@ namespace wineHandler
                     .AsNoTracking()
                     .Select(b => new
                     {
+                        IdBouteille = b.IdBouteille,
                         NomVin = b.IdVinNavigation.Nom,
                         NomAppellation = b.IdVinNavigation.IdAppellationNavigation.Nom,
-                        PlageConso = (b.IdVinNavigation.AnneeMillesime
-                                      + (b.IdVinNavigation.AnneesRecMin ?? 0))
+                        Couleur = b.IdVinNavigation.Couleur,
+                        PlageConso = (b.IdVinNavigation.AnneeMillesime + (b.IdVinNavigation.AnneesRecMin ?? 0))
                                      + " - " +
-                                     (b.IdVinNavigation.AnneeMillesime
-                                      + (b.IdVinNavigation.AnneesRecMax ?? 0)),
+                                     (b.IdVinNavigation.AnneeMillesime + (b.IdVinNavigation.AnneesRecMax ?? 0)),
                         Cave = b.IdCaveNavigation.Nom,
                         Emplacement = $"Tiroir : {b.NoTiroir} Emplacement : {b.NoEmplacement}",
                         StatutCode = b.Statut
@@ -127,8 +160,10 @@ namespace wineHandler
                     .AsEnumerable()
                     .Select(x => new
                     {
+                        x.IdBouteille,
                         x.NomVin,
                         x.NomAppellation,
+                        Couleur = string.IsNullOrWhiteSpace(x.Couleur) ? "‚Äî" : x.Couleur,
                         x.PlageConso,
                         x.Cave,
                         x.Emplacement,
@@ -137,8 +172,9 @@ namespace wineHandler
                     })
                     .ToList();
 
+
                 DataGridVin.DataSource = raw;
-            }
+                        }
             catch (Exception ex)
             {
                 MessageBox.Show("Erreur: " + ex.Message);
@@ -160,7 +196,6 @@ namespace wineHandler
                     .Include(b => b.IdCaveNavigation)
                     .AsQueryable();
 
-                // 1) filtre texte (nom vin ou appellation) - insensible ‡ la casse
                 if (!string.IsNullOrWhiteSpace(txtBoxSearch.Text))
                 {
                     string s = txtBoxSearch.Text.Trim().ToLower();
@@ -169,7 +204,6 @@ namespace wineHandler
                         b.IdVinNavigation.IdAppellationNavigation.Nom.ToLower().Contains(s));
                 }
 
-                // 2) filtre cave par Id si une cave est sÈlectionnÈe
                 if (comboBoxCave.SelectedIndex >= 0 && comboBoxCave.SelectedValue != null)
                 {
                     if (int.TryParse(comboBoxCave.SelectedValue.ToString(), out int caveId))
@@ -178,7 +212,6 @@ namespace wineHandler
                     }
                 }
 
-                // 3) filtre appellation par Id si une appellation est sÈlectionnÈe
                 if (comboBoxAppellation.SelectedIndex >= 0 && comboBoxAppellation.SelectedValue != null)
                 {
                     if (int.TryParse(comboBoxAppellation.SelectedValue.ToString(), out int appId))
@@ -186,31 +219,49 @@ namespace wineHandler
                         query = query.Where(b => b.IdVinNavigation.IdAppellation == appId);
                     }
                 }
-                // TODO : C'est le moment de boire !
-                //if (checkBoxAppoge.Checked)
-                //{
-                //    query = query.Where(b => b.)
-                //}
+                if (checkBoxAppoge.Checked)
+                {
+                    var currentYear = DateTime.Now.Year; // ou DateTime.Today.Year
+                    query = query.Where(b =>
+                        (b.IdVinNavigation.AnneeMillesime + (b.IdVinNavigation.AnneesRecMin ?? 0)) <= currentYear
+                        && currentYear <= (b.IdVinNavigation.AnneeMillesime + (b.IdVinNavigation.AnneesRecMax ?? 0))
+                    );
+                }
 
-                // debug : afficher la SQL gÈnÈrÈe (utile pour voir les WHERE)
+
                 var sql = query.ToQueryString();
-
                 var count = query.Count();
-                Debug.WriteLine($"RÈsultats trouvÈs (avant projection) : {count}");
-                MessageBox.Show($"RÈsultats trouvÈs : {count}");
-
+                Debug.WriteLine($"R√©sultats trouv√©s (avant projection) : {count}");
+                MessageBox.Show($"R√©sultats trouv√©s : {count}");
                 var result = query
                     .AsNoTracking()
                     .Select(b => new
                     {
+                        IdBouteille = b.IdBouteille,
                         NomVin = b.IdVinNavigation.Nom,
                         NomAppellation = b.IdVinNavigation.IdAppellationNavigation.Nom,
+                        Couleur = b.IdVinNavigation.Couleur,
                         PlageConso = $"{b.IdVinNavigation.AnneeMillesime + (b.IdVinNavigation.AnneesRecMin ?? 0)} - {b.IdVinNavigation.AnneeMillesime + (b.IdVinNavigation.AnneesRecMax ?? 0)}",
                         Cave = b.IdCaveNavigation.Nom,
-                        Emplacement = $"Tiroir : {b.NoTiroir} Emplacement : {b.NoEmplacement}"
+                        Emplacement = $"Tiroir : {b.NoTiroir} Emplacement : {b.NoEmplacement}",
+                        StatutCode = b.Statut
+                    })
+                    .AsEnumerable()
+                    .Select(x => new
+                    {
+                        x.IdBouteille,
+                        x.NomVin,
+                        x.NomAppellation,
+                        Couleur = string.IsNullOrWhiteSpace(x.Couleur) ? "‚Äî" : x.Couleur,
+                        x.PlageConso,
+                        x.Cave,
+                        x.Emplacement,
+                        Statut = EnumHelper.GetDescription(
+                            Enum.TryParse<StatutBouteille>(x.StatutCode, out var st) ? st : StatutBouteille.S)
                     })
                     .ToList();
 
+                DataGridVin.DataSource = result;
                 DataGridVin.DataSource = result;
             }
             catch (Exception ex)
@@ -259,5 +310,55 @@ namespace wineHandler
                 }
             }
         }
+
+        private void btnSupprimerBouteille_Click(object sender, EventArgs e)
+        {
+            if (DataGridVin.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Veuillez s√©lectionner une bouteille √† supprimer.");
+                return;
+            }
+
+            var row = DataGridVin.SelectedRows[0];
+
+            if (row.Cells["IdBouteille"]?.Value == null || !int.TryParse(row.Cells["IdBouteille"].Value.ToString(), out int idBouteille))
+            {
+                MessageBox.Show("Impossible de d√©terminer l'identifiant de la bouteille s√©lectionn√©e.");
+                return;
+            }
+
+            try
+            {
+                var bouteille = _context.Bouteilles
+                    .Include(b => b.IdVinNavigation)
+                    .FirstOrDefault(b => b.IdBouteille == idBouteille);
+
+                if (bouteille == null)
+                {
+                    MessageBox.Show("Bouteille introuvable en base.");
+                    return;
+                }
+
+                var confirm = MessageBox.Show(
+                    $"Supprimer \"{bouteille.IdVinNavigation?.Nom}\" (Tiroir {bouteille.NoTiroir}, Emplacement {bouteille.NoEmplacement}) ?",
+                    "Confirmation",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (confirm != DialogResult.Yes) return;
+
+                _context.Bouteilles.Remove(bouteille);
+                _context.SaveChanges();
+
+                loadTableau();
+                MessageBox.Show("Bouteille supprim√©e avec succ√®s.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de la suppression : " + ex.Message);
+            }
+        }
+
     }
 }

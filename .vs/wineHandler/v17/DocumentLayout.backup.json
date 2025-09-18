@@ -3,64 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\user0\\source\\repos\\wineHandler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\ajoutercave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\ajoutercave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\formajoutervin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formajoutervin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\utils\\load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\utils\\load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\models\\cave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\models\\cave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\formajoutervin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formajoutervin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|C:\\Users\\user0\\source\\repos\\wineHandler\\winehandler\\ajoutercave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\ajoutercave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\ajoutercave.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\ajoutercave.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\formaccueil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formaccueil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|C:\\Users\\user0\\source\\repos\\wineHandler\\winehandler\\formajoutervin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formajoutervin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|C:\\Users\\user0\\source\\repos\\wineHandler\\winehandler\\formaccueil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formaccueil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\models\\vin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\models\\vin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\models\\bouteille.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\models\\bouteille.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\utils\\style.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\utils\\style.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\ajoutercave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\ajoutercave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\utils\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\utils\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\utils\\load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\utils\\load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\utils\\style.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\utils\\style.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|C:\\Users\\user0\\source\\repos\\wineHandler\\winehandler\\formaccueil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formaccueil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|C:\\Users\\user0\\source\\repos\\wineHandler\\winehandler\\ajoutercave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\ajoutercave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\formaccueil.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formaccueil.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\formajoutervin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formajoutervin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\models\\vin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\models\\vin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\formajoutervin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formajoutervin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\models\\cave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\models\\cave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\ajoutercave.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\ajoutercave.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|C:\\Users\\user0\\source\\repos\\wineHandler\\winehandler\\formajoutervin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\formajoutervin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\models\\bouteille.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|solutionrelative:winehandler\\models\\bouteille.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{746B0398-EA79-4CC9-8BEB-E1F4791CF452}|wineHandler\\wineHandler.csproj|c:\\users\\user0\\source\\repos\\winehandler\\winehandler\\models\\appellation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,30 +78,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormAccueil.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAccueil.cs",
-              "RelativeDocumentMoniker": "wineHandler\\FormAccueil.cs",
-              "ToolTip": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAccueil.cs [Design]",
-              "RelativeToolTip": "wineHandler\\FormAccueil.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T07:38:15.904Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "FormAccueil.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAccueil.cs",
               "RelativeDocumentMoniker": "wineHandler\\FormAccueil.cs",
               "ToolTip": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAccueil.cs",
               "RelativeToolTip": "wineHandler\\FormAccueil.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAPQAAACA1szMzAwgwMYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T09:23:47.782Z",
               "IsPinned": true,
@@ -109,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AjouterCave.cs [Conception]",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\AjouterCave.cs",
               "RelativeDocumentMoniker": "wineHandler\\AjouterCave.cs",
@@ -122,13 +109,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AjouterCave.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\AjouterCave.cs",
               "RelativeDocumentMoniker": "wineHandler\\AjouterCave.cs",
               "ToolTip": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\AjouterCave.cs",
               "RelativeToolTip": "wineHandler\\AjouterCave.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAqwHsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwGkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T12:49:13.313Z",
               "IsPinned": true,
@@ -136,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "FormAjouterVin.cs [Conception]",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAjouterVin.cs",
               "RelativeDocumentMoniker": "wineHandler\\FormAjouterVin.cs",
@@ -149,13 +136,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "FormAjouterVin.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAjouterVin.cs",
               "RelativeDocumentMoniker": "wineHandler\\FormAjouterVin.cs",
               "ToolTip": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAjouterVin.cs",
               "RelativeToolTip": "wineHandler\\FormAjouterVin.cs",
-              "ViewState": "AgIAAFYAAAAAIGZmZmbmv5UAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAowLUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T14:16:55.614Z",
               "IsPinned": true,
@@ -163,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "FormAjouterVin.Designer.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAjouterVin.Designer.cs",
               "RelativeDocumentMoniker": "wineHandler\\FormAjouterVin.Designer.cs",
@@ -177,13 +164,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Load.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\Utils\\Load.cs",
               "RelativeDocumentMoniker": "wineHandler\\Utils\\Load.cs",
               "ToolTip": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\Utils\\Load.cs",
               "RelativeToolTip": "wineHandler\\Utils\\Load.cs",
-              "ViewState": "AgIAABMAAACAMjMzM/MlwCkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAzMzMzMwWwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T19:12:33.363Z",
               "IsPinned": true,
@@ -191,7 +178,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
+              "Title": "FormAccueil.cs [Conception]",
+              "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAccueil.cs",
+              "RelativeDocumentMoniker": "wineHandler\\FormAccueil.cs",
+              "ToolTip": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAccueil.cs [Conception]",
+              "RelativeToolTip": "wineHandler\\FormAccueil.cs [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T07:38:15.904Z",
+              "IsPinned": true,
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "AjouterCave.Designer.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\AjouterCave.Designer.cs",
               "RelativeDocumentMoniker": "wineHandler\\AjouterCave.Designer.cs",
@@ -204,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Bouteille.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\Models\\Bouteille.cs",
               "RelativeDocumentMoniker": "wineHandler\\Models\\Bouteille.cs",
@@ -228,19 +228,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 7,
               "Title": "FormAccueil.Designer.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAccueil.Designer.cs",
               "RelativeDocumentMoniker": "wineHandler\\FormAccueil.Designer.cs",
               "ToolTip": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\FormAccueil.Designer.cs",
               "RelativeToolTip": "wineHandler\\FormAccueil.Designer.cs",
-              "ViewState": "AgIAABYAAACAlJmZmRkTwBYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowO8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T18:29:36.901Z"
+              "WhenOpened": "2025-09-18T18:29:36.901Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "Style.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\Utils\\Style.cs",
               "RelativeDocumentMoniker": "wineHandler\\Utils\\Style.cs",
@@ -248,35 +249,38 @@
               "RelativeToolTip": "wineHandler\\Utils\\Style.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T18:41:02.308Z"
+              "WhenOpened": "2025-09-18T18:41:02.308Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "EnumHelper.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\Utils\\EnumHelper.cs",
               "RelativeDocumentMoniker": "wineHandler\\Utils\\EnumHelper.cs",
               "ToolTip": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\Utils\\EnumHelper.cs",
               "RelativeToolTip": "wineHandler\\Utils\\EnumHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T18:41:23.665Z"
+              "WhenOpened": "2025-09-18T18:41:23.665Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Vin.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\Models\\Vin.cs",
               "RelativeDocumentMoniker": "wineHandler\\Models\\Vin.cs",
               "ToolTip": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\Models\\Vin.cs",
               "RelativeToolTip": "wineHandler\\Models\\Vin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T10:09:42.804Z"
+              "WhenOpened": "2025-09-18T10:09:42.804Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Cave.cs",
               "DocumentMoniker": "C:\\Users\\user0\\source\\repos\\wineHandler\\wineHandler\\Models\\Cave.cs",
               "RelativeDocumentMoniker": "wineHandler\\Models\\Cave.cs",
@@ -284,8 +288,7 @@
               "RelativeToolTip": "wineHandler\\Models\\Cave.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T09:36:20.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T09:36:20.233Z"
             },
             {
               "$type": "Document",

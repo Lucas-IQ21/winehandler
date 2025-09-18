@@ -45,6 +45,7 @@
             btnRechercher = new Button();
             btnAjouterCave = new Button();
             btnAjouterVin = new Button();
+            btnSupprimerBouteille = new Button();
             ((System.ComponentModel.ISupportInitialize)DataGridVin).BeginInit();
             SuspendLayout();
             // 
@@ -183,11 +184,22 @@
             btnAjouterVin.UseVisualStyleBackColor = true;
             btnAjouterVin.Click += btnAjouterVin_Click_1;
             // 
+            // btnSupprimerBouteille
+            // 
+            btnSupprimerBouteille.Location = new Point(455, 533);
+            btnSupprimerBouteille.Name = "btnSupprimerBouteille";
+            btnSupprimerBouteille.Size = new Size(75, 23);
+            btnSupprimerBouteille.TabIndex = 11;
+            btnSupprimerBouteille.Text = "Supprimer";
+            btnSupprimerBouteille.UseVisualStyleBackColor = true;
+            btnSupprimerBouteille.Click += btnSupprimerBouteille_Click;
+            // 
             // FormAccueil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1004, 563);
+            Controls.Add(btnSupprimerBouteille);
             Controls.Add(btnAjouterVin);
             Controls.Add(btnAjouterCave);
             Controls.Add(btnRechercher);
@@ -225,5 +237,6 @@
         private DataGridViewTextBoxColumn Cave;
         private DataGridViewTextBoxColumn Tiroir;
         private DataGridViewTextBoxColumn Consommer;
+        private Button btnSupprimerBouteille;
     }
 }

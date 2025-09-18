@@ -195,7 +195,6 @@ namespace wineHandler
                 // debug : afficher la SQL générée (utile pour voir les WHERE)
                 var sql = query.ToQueryString();
 
-                // debug : nombre de résultats
                 var count = query.Count();
                 Debug.WriteLine($"Résultats trouvés (avant projection) : {count}");
                 MessageBox.Show($"Résultats trouvés : {count}");

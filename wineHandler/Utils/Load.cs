@@ -38,5 +38,13 @@ public class Load
         comboBoxCave.DataSource = caves;
         comboBoxCave.SelectedIndex = -1;
     }
+
+    public void CavesGrid(DataGridView grid)
+    {
+        var caves = _context.Caves
+       .OrderBy(c => c.Nom)
+        .ToList();
+        grid.DataSource = caves;
+    }
 }
 

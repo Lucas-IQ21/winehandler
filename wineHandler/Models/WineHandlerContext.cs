@@ -21,10 +21,6 @@ public partial class WineHandlerContext : DbContext
 
     public virtual DbSet<Cave> Caves { get; set; }
 
-    public virtual DbSet<VBouteillesAlapogee> VBouteillesAlapogees { get; set; }
-
-    public virtual DbSet<VBouteillesEnStock> VBouteillesEnStocks { get; set; }
-
     public virtual DbSet<Vin> Vins { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -91,33 +87,6 @@ public partial class WineHandlerContext : DbContext
             entity.Property(e => e.TemperatureC).HasColumnType("decimal(4, 1)");
         });
 
-        modelBuilder.Entity<VBouteillesAlapogee>(entity =>
-        {
-            entity
-                .HasNoKey()
-                .ToView("v_BouteillesALApogee");
-
-            entity.Property(e => e.Couleur).HasMaxLength(10);
-            entity.Property(e => e.Fabricant).HasMaxLength(100);
-            entity.Property(e => e.Famille).HasMaxLength(100);
-            entity.Property(e => e.NomAppellation).HasMaxLength(100);
-            entity.Property(e => e.NomCave).HasMaxLength(100);
-            entity.Property(e => e.NomVin).HasMaxLength(200);
-        });
-
-        modelBuilder.Entity<VBouteillesEnStock>(entity =>
-        {
-            entity
-                .HasNoKey()
-                .ToView("v_BouteillesEnStock");
-
-            entity.Property(e => e.Couleur).HasMaxLength(10);
-            entity.Property(e => e.Fabricant).HasMaxLength(100);
-            entity.Property(e => e.Famille).HasMaxLength(100);
-            entity.Property(e => e.NomAppellation).HasMaxLength(100);
-            entity.Property(e => e.NomCave).HasMaxLength(100);
-            entity.Property(e => e.NomVin).HasMaxLength(200);
-        });
 
         modelBuilder.Entity<Vin>(entity =>
         {

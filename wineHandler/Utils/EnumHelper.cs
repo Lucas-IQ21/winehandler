@@ -13,10 +13,7 @@ namespace wineHandler.Utils
 
             if (field != null)
             {
-                var attribute = field.GetCustomAttributes(typeof(DescriptionAttribute), false)
-                                     .Cast<DescriptionAttribute>()
-                                     .FirstOrDefault();
-
+                var attribute = field.GetCustomAttributes(typeof(DescriptionAttribute), false).Cast<DescriptionAttribute>().FirstOrDefault();
                 if (attribute != null)
                     return attribute.Description;
             }

@@ -48,6 +48,7 @@
             btnSupprimerBouteille = new Button();
             btnConsommerBouteille = new Button();
             checkBoxStockUniquement = new CheckBox();
+            btnExportCSV = new Button();
             ((System.ComponentModel.ISupportInitialize)DataGridVin).BeginInit();
             SuspendLayout();
             // 
@@ -217,11 +218,23 @@
             checkBoxStockUniquement.UseVisualStyleBackColor = true;
             checkBoxStockUniquement.CheckedChanged += checkBoxStockUniquement_CheckedChanged;
             // 
+            // btnExportCSV
+            // 
+            btnExportCSV.Location = new Point(522, 135);
+            btnExportCSV.Name = "btnExportCSV";
+            btnExportCSV.RightToLeft = RightToLeft.Yes;
+            btnExportCSV.Size = new Size(99, 52);
+            btnExportCSV.TabIndex = 14;
+            btnExportCSV.Text = "Exporter en CSV";
+            btnExportCSV.UseVisualStyleBackColor = true;
+            btnExportCSV.Click += btnExportCSV_Click;
+            // 
             // FormAccueil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1004, 563);
+            Controls.Add(btnExportCSV);
             Controls.Add(checkBoxStockUniquement);
             Controls.Add(btnConsommerBouteille);
             Controls.Add(btnSupprimerBouteille);
@@ -265,5 +278,6 @@
         private Button btnSupprimerBouteille;
         private Button btnConsommerBouteille;
         private CheckBox checkBoxStockUniquement;
+        private Button btnExportCSV;
     }
 }

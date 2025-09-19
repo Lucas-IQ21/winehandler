@@ -22,7 +22,7 @@ namespace wineHandler
             InitializeComponent();
             _context = new WineHandlerContext();
             Style style = new Style();
-            var loader = new Load(_context);
+            Load loader = new Load(_context);
             loader.CavesGrid(dataGridViewCaves);
 
             // Style général du formulaire
@@ -158,8 +158,5 @@ namespace wineHandler
                 MessageBox.Show("Erreur lors de la suppression : " + ex.Message);
             }
         }
-
-
-
     }
 }

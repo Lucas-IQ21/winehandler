@@ -1,6 +1,7 @@
 ﻿using Azure.Core;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Text;
 using System.Windows.Forms;
 using wineHandler.Models;
 using wineHandler.Utils;
@@ -75,7 +76,7 @@ namespace wineHandler
             if (DataGridVin.Parent != null)
                 DataGridVin.Parent.SizeChanged += (_, __) => buttonSupprimerSousLeTableau();
 
-            style.button(btnConsommerBouteille, Color.Peru); // ou Color.SaddleBrown
+            style.button(btnConsommerBouteille, Color.Peru);
             btnConsommerBouteille.Text = "🍷 Consommer";
             btnConsommerBouteille.Font = new Font("Segoe UI", 11, FontStyle.Bold);
             btnConsommerBouteille.FlatAppearance.BorderSize = 0;
@@ -98,7 +99,6 @@ namespace wineHandler
         {
             try
             {
-                // Config DataGrid
                 DataGridVin.ReadOnly = true;
                 DataGridVin.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 DataGridVin.AllowUserToAddRows = false;
@@ -110,7 +110,6 @@ namespace wineHandler
 
                 DataGridVin.Columns.Clear();
 
-                // Colonnes
                 DataGridVin.Columns.Add(new DataGridViewTextBoxColumn()
                 {
                     HeaderText = "Nom du vin",
@@ -251,9 +250,6 @@ namespace wineHandler
                     );
                 }
 
-
-
-                var sql = query.ToQueryString();
                 var count = query.Count();
                 Debug.WriteLine($"Résultats trouvés (avant projection) : {count}");
                 MessageBox.Show($"Résultats trouvés : {count}");
@@ -455,6 +451,55 @@ namespace wineHandler
         {
 
         }
+
+        private void btnExportCSV_Click(object sender, EventArgs e)
+        {
+            if (DataGridVin.Rows.Count == 0)
+            {
+                MessageBox.Show("Aucune donnée à exporter.");
+                return;
+            }
+
+            using (SaveFileDialog sfd = new SaveFileDialog()
+            {
+                Filter = "CSV (*.csv)|*.csv",
+                FileName = "export_vins.csv"
+            })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (var sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+                        {
+                            var headers = DataGridVin.Columns
+                                .Cast<DataGridViewColumn>()
+                                .Where(c => c.Visible)
+                                .Select(c => c.HeaderText);
+                            sw.WriteLine(string.Join(";", headers));
+
+                              foreach (DataGridViewRow row in DataGridVin.Rows)
+                            {
+                                if (!row.IsNewRow)
+                                {
+                                    var values = row.Cells
+                                        .Cast<DataGridViewCell>()
+                                        .Where(c => c.OwningColumn.Visible)
+                                        .Select(c => c.Value?.ToString()?.Replace(";", ",") ?? "");
+                                    sw.WriteLine(string.Join(";", values));
+                                }
+                            }
+                        }
+                        MessageBox.Show("Export terminé avec succès.", "Export CSV", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erreur lors de l'export : " + ex.Message);
+                    }
+                }
+            }
+        }
+
     }
 }
 

@@ -42,8 +42,19 @@ public class Load
     public void CavesGrid(DataGridView grid)
     {
         var caves = _context.Caves
-       .OrderBy(c => c.Nom)
-        .ToList();
+            .OrderBy(c => c.Nom)
+            .Select(c => new
+            {
+                c.IdCave,
+                c.Nom,
+                c.Famille,
+                c.Fabricant,
+                c.NbTiroirs,
+                c.BouteillesParTiroir,
+                c.TemperatureC,
+                c.Capacite
+            })
+            .ToList();
         grid.DataSource = caves;
     }
 }

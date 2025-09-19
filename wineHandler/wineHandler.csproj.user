@@ -4,6 +4,9 @@
     <Compile Update="AjouterCave.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ConsommerBouteillesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormAccueil.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -143,3 +143,4 @@ C:\Users\user0\source\repos\wineHandler\wineHandler\obj\Debug\net8.0-windows\ref
 C:\Users\user0\source\repos\wineHandler\wineHandler\obj\Debug\net8.0-windows\wineHandler.AjouterCave.resources
 C:\Users\user0\source\repos\wineHandler\wineHandler\obj\Debug\net8.0-windows\wineHandler.FormAjouterVin.resources
 C:\Users\user0\source\repos\wineHandler\wineHandler\obj\Debug\net8.0-windows\wineHandler.sourcelink.json
+C:\Users\user0\source\repos\wineHandler\wineHandler\obj\Debug\net8.0-windows\wineHandler.ConsommerBouteillesDialog.resources

@@ -19,7 +19,7 @@ namespace wineHandler
             loader.Caves(comboBoxCave);
             loadTableau();
             Style style = new Style();
-            // Style général
+
             this.BackColor = Color.WhiteSmoke;
             this.Font = new Font("Segoe UI", 10, FontStyle.Regular);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -75,7 +75,22 @@ namespace wineHandler
             if (DataGridVin.Parent != null)
                 DataGridVin.Parent.SizeChanged += (_, __) => buttonSupprimerSousLeTableau();
 
+            style.button(btnConsommerBouteille, Color.Peru); // ou Color.SaddleBrown
+            btnConsommerBouteille.Text = "🍷 Consommer";
+            btnConsommerBouteille.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            btnConsommerBouteille.FlatAppearance.BorderSize = 0;
 
+            btnConsommerBouteille.Parent = DataGridVin.Parent;
+            btnConsommerBouteille.Size = new Size(160, 40);
+            btnConsommerBouteille.Location = new Point(DataGridVin.Left + 0, DataGridVin.Bottom + 10);
+            btnConsommerBouteille.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            btnConsommerBouteille.Enabled = false;
+            DataGridVin.SelectionChanged += (_, __) =>
+            {
+                btnConsommerBouteille.Enabled = DataGridVin.SelectedRows.Count > 0;
+            };
+            btnConsommerBouteille.Click += btnConsommerBouteille_Click;
         }
 
 
@@ -174,7 +189,7 @@ namespace wineHandler
 
 
                 DataGridVin.DataSource = raw;
-                        }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Erreur: " + ex.Message);
@@ -221,12 +236,21 @@ namespace wineHandler
                 }
                 if (checkBoxAppoge.Checked)
                 {
-                    var currentYear = DateTime.Now.Year; // ou DateTime.Today.Year
+                    var currentYear = DateTime.Now.Year;
                     query = query.Where(b =>
                         (b.IdVinNavigation.AnneeMillesime + (b.IdVinNavigation.AnneesRecMin ?? 0)) <= currentYear
                         && currentYear <= (b.IdVinNavigation.AnneeMillesime + (b.IdVinNavigation.AnneesRecMax ?? 0))
                     );
                 }
+
+                if (checkBoxStockUniquement.Checked)
+                {
+                    query = query.Where(b =>
+                        b.Statut == nameof(StatutBouteille.S)
+                        || b.Statut == null
+                    );
+                }
+
 
 
                 var sql = query.ToQueryString();
@@ -360,5 +384,77 @@ namespace wineHandler
             }
         }
 
+        private void btnConsommerBouteille_Click(object sender, EventArgs e)
+        {
+            if (DataGridVin.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Veuillez sélectionner une bouteille.");
+                return;
+            }
+
+            var row = DataGridVin.SelectedRows[0];
+            if (row.Cells["IdBouteille"]?.Value == null ||
+                !int.TryParse(row.Cells["IdBouteille"].Value.ToString(), out int idBouteille))
+            {
+                MessageBox.Show("Impossible de déterminer l'identifiant de la bouteille sélectionnée.");
+                return;
+            }
+
+            try
+            {
+                var bouteille = _context.Bouteilles
+                    .Include(b => b.IdVinNavigation)
+                    .FirstOrDefault(b => b.IdBouteille == idBouteille);
+
+                if (bouteille == null)
+                {
+                    MessageBox.Show("Bouteille introuvable en base.");
+                    return;
+                }
+
+                using (var dlg = new ConsommerBouteillesDialog())
+                {
+                    if (dlg.ShowDialog(this) != DialogResult.OK) return;
+
+                    var finals = new[] { "C", "V", "G", "X", "J" };
+                    if (!string.IsNullOrWhiteSpace(bouteille.Statut) && finals.Contains(bouteille.Statut))
+                    {
+                        var confirm = MessageBox.Show(
+                            $"Cette bouteille est déjà marquée '{EnumHelper.GetDescription(Enum.Parse<StatutBouteille>(bouteille.Statut))}'. " +
+                            "Voulez-vous modifier son statut ?",
+                            "Confirmation",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Warning);
+                        if (confirm != DialogResult.Yes) return;
+                    }
+
+                    var currentDate = DateOnly.FromDateTime(DateTime.Now);
+                    bouteille.Statut = dlg.SelectedCode;
+                    bouteille.DateConsommation = currentDate;
+                    try
+                    {
+                        _context.SaveChanges();
+                    }
+                    catch (DbUpdateException ex)
+                    {
+                        var root = ex.GetBaseException()?.Message ?? ex.Message;
+                        MessageBox.Show("Erreur lors de la mise à jour : " + root);
+                    }
+                    loadTableau();
+
+                    MessageBox.Show("Bouteille mise à jour avec succès.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de la mise à jour : " + ex.Message);
+            }
+        }
+
+        private void checkBoxStockUniquement_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

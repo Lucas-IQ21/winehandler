@@ -46,6 +46,8 @@
             btnAjouterCave = new Button();
             btnAjouterVin = new Button();
             btnSupprimerBouteille = new Button();
+            btnConsommerBouteille = new Button();
+            checkBoxStockUniquement = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)DataGridVin).BeginInit();
             SuspendLayout();
             // 
@@ -194,11 +196,34 @@
             btnSupprimerBouteille.UseVisualStyleBackColor = true;
             btnSupprimerBouteille.Click += btnSupprimerBouteille_Click;
             // 
+            // btnConsommerBouteille
+            // 
+            btnConsommerBouteille.Location = new Point(214, 122);
+            btnConsommerBouteille.Name = "btnConsommerBouteille";
+            btnConsommerBouteille.Size = new Size(119, 41);
+            btnConsommerBouteille.TabIndex = 12;
+            btnConsommerBouteille.Text = "Consommer une bouteille";
+            btnConsommerBouteille.UseVisualStyleBackColor = true;
+            btnConsommerBouteille.Click += btnConsommerBouteille_Click;
+            // 
+            // checkBoxStockUniquement
+            // 
+            checkBoxStockUniquement.AutoSize = true;
+            checkBoxStockUniquement.Location = new Point(20, 144);
+            checkBoxStockUniquement.Name = "checkBoxStockUniquement";
+            checkBoxStockUniquement.Size = new Size(123, 19);
+            checkBoxStockUniquement.TabIndex = 13;
+            checkBoxStockUniquement.Text = "Stock uniquement";
+            checkBoxStockUniquement.UseVisualStyleBackColor = true;
+            checkBoxStockUniquement.CheckedChanged += checkBoxStockUniquement_CheckedChanged;
+            // 
             // FormAccueil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1004, 563);
+            Controls.Add(checkBoxStockUniquement);
+            Controls.Add(btnConsommerBouteille);
             Controls.Add(btnSupprimerBouteille);
             Controls.Add(btnAjouterVin);
             Controls.Add(btnAjouterCave);
@@ -238,5 +263,7 @@
         private DataGridViewTextBoxColumn Tiroir;
         private DataGridViewTextBoxColumn Consommer;
         private Button btnSupprimerBouteille;
+        private Button btnConsommerBouteille;
+        private CheckBox checkBoxStockUniquement;
     }
 }
